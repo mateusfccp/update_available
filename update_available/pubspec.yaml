@@ -1,26 +1,20 @@
 name: update_available
-description: A new flutter plugin project.
-version: 0.0.1
-author:
-homepage:
+description: Know if there's any update for your Flutter app
+version: 1.0.0
+repository: https://github.com/mateusfccp/update_available/tree/master/update_available
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.9.0 <3.0.0"
   flutter: ">=1.20.0 <2.0.0"
 
 dependencies:
-  update_available_platform_interface:
-    path: ../update_available_platform_interface
+  update_available_platform_interface: ^1.0.1
   flutter:
     sdk: flutter
-  update_available_android:
-    path: ../update_available_android
-  update_available_ios:
-    path: ../update_available_ios
+  update_available_android: ^1.0.1
+  update_available_ios: ^1.0.1
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
   pedantic: ^1.9.0
 
 flutter:
