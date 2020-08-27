@@ -1,5 +1,4 @@
 import 'package:meta/meta.dart';
-import 'package:update_available_platform_interface/interface.dart';
 import 'package:update_available_platform_interface/update_available_platform_interface.dart';
 
 import 'domain/get_ios_bundle_id.dart';
