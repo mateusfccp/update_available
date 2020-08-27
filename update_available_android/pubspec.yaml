@@ -1,24 +1,19 @@
 name: update_available_android
-description: A new flutter plugin project.
-version: 0.0.1
-author:
-homepage:
+description: Android platform implementation of update_available
+version: 1.0.1
+repository: https://github.com/mateusfccp/update_available/tree/master/update_available_android
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.9.0 <3.0.0"
   flutter: ">=1.20.0 <2.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  update_available_platform_interface:
-    path: ../update_available_platform_interface
+  update_available_platform_interface: ^1.0.1
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
   pedantic: ^1.9.0
-
 
 flutter:
   plugin:
