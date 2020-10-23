@@ -1,22 +1,15 @@
-A library for Dart developers.
+# update_avaiable_platform_interface
 
-Created from templates made available by Stagehand under a BSD-style
-[license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).
+A common platform interface for the [update_available](https://pub.dev/packages/update_available) plugin.
+
+This interface allows platform-specific implementations of the [update_available](https://pub.dev/packages/update_available) plugin, as well as the plugin itself, to ensure they are supporting the same interface.
 
 ## Usage
 
-A simple usage example:
+To implement a new platform-specific implementation of [update_available](https://pub.dev/packages/update_available), extend `UpdateAvailablePlatform` with an implementation that performs the platform-specific behavior, and when you register your plugin, set the default `UpdateAvailablePlatform` by calling `UpdateAvailablePlatform.instance = MyPlatformUpdateAvailable()`.
 
-```dart
-import 'package:update_available_platform_interface/update_available_platform_interface.dart';
+## Note on breaking changes 
 
-main() {
-  var awesome = new Awesome();
-}
-```
+Strongly prefer non-breaking changes (such as adding a method to the interface) over breaking changes for this package.
 
-## Features and bugs
-
-Please file feature requests and bugs at the [issue tracker][tracker].
-
-[tracker]: http://example.com/issues/replaceme
+See https://flutter.dev/go/platform-interface-breaking-changes for a discussion on why a less-clean interface is preferable to a breaking change.
