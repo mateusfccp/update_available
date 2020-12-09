@@ -1,3 +1,7 @@
+## 1.0.0+1c
+
+- Added trivial example
+
 ## 1.0.0+1b
 
 - Document `getUpdateAvailability()`
