@@ -1,3 +1,11 @@
+## 1.0.1+1d
+
+- Fix typo on documentation
+
+## 1.0.1+1c
+
+- Revert changes on `pubspec.yaml`, as pub.dev won't accept a plugin declaration without native integration.
+
 ## 1.0.1+1b
 
 - Update README.md

@@ -7,7 +7,7 @@ import 'package:meta/meta.dart';
 /// the process couldn't determine if a update is available or not, an
 /// [UnknownAvailability] will be yielded.
 ///
-/// To check agains the status, the recommended way is to use [fold] or
+/// To check against the status, the recommended way is to use [fold] or
 /// [foldElse], as they are safest than comparing with `if`, because it forces
 /// you to provide every possible case.
 class Availability {
