@@ -1,3 +1,7 @@
+## 1.0.1+1b
+
+- Improved documentation
+
 ## 1.0.1+1
 
 - Updated README.md
