@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:pub_semver/pub_semver.dart';
 import 'package:update_available_ios/update_available_ios.dart';
 import 'package:update_available_platform_interface/update_available_platform_interface.dart';
-import 'package:version/version.dart';
 
 void main() {
   test(
@@ -9,9 +9,9 @@ void main() {
     () async {
       // Arrange
       final plugin = UpdateAvailablePlugin(
-        getIOSBundleId: () => 'fakeId',
-        getIOSPackageVersion: (_) => null,
-        getIOSVersion: () => Version(1, 0, 0),
+        getIOSBundleId: () async => 'fakeId',
+        getIOSPackageVersion: (_) async => null,
+        getIOSVersion: () async => Version(1, 0, 0),
       );
 
       // Assert
@@ -24,9 +24,9 @@ void main() {
     () async {
       // Arrange
       final plugin = UpdateAvailablePlugin(
-        getIOSBundleId: () => 'fakeId',
-        getIOSPackageVersion: (_) => Version(1, 0, 0),
-        getIOSVersion: () => null,
+        getIOSBundleId: () async => 'fakeId',
+        getIOSPackageVersion: (_) async => Version(1, 0, 0),
+        getIOSVersion: () async => null,
       );
 
       // Assert
@@ -39,9 +39,9 @@ void main() {
     () async {
       // Arrange
       final plugin = UpdateAvailablePlugin(
-        getIOSBundleId: () => 'fakeId',
-        getIOSPackageVersion: (_) => Version(1, 1, 0),
-        getIOSVersion: () => Version(1, 0, 0),
+        getIOSBundleId: () async => 'fakeId',
+        getIOSPackageVersion: (_) async => Version(1, 1, 0),
+        getIOSVersion: () async => Version(1, 0, 0),
       );
 
       // Assert
@@ -54,9 +54,9 @@ void main() {
     () async {
       // Arrange
       final plugin = UpdateAvailablePlugin(
-        getIOSBundleId: () => 'fakeId',
-        getIOSPackageVersion: (_) => Version(1, 0, 0),
-        getIOSVersion: () => Version(1, 0, 0),
+        getIOSBundleId: () async => 'fakeId',
+        getIOSPackageVersion: (_) async => Version(1, 0, 0),
+        getIOSVersion: () async => Version(1, 0, 0),
       );
 
       // Assert
@@ -69,9 +69,9 @@ void main() {
     () async {
       // Arrange
       final plugin = UpdateAvailablePlugin(
-        getIOSBundleId: () => 'fakeId',
-        getIOSPackageVersion: (_) => Version(1, 0, 0),
-        getIOSVersion: () => Version(1, 1, 0),
+        getIOSBundleId: () async => 'fakeId',
+        getIOSPackageVersion: (_) async => Version(1, 0, 0),
+        getIOSVersion: () async => Version(1, 1, 0),
       );
 
       // Assert

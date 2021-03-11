@@ -1,5 +1,5 @@
 import 'dart:async';
 
-import 'package:version/version.dart';
+import 'package:pub_semver/pub_semver.dart';
 
-typedef GetIOSVersion = FutureOr<Version> Function();
+typedef GetIOSVersion = Future<Version?> Function();

@@ -1,3 +1,3 @@
 import 'dart:async';
 
-typedef GetIOSBundleId = FutureOr<String> Function();
+typedef GetIOSBundleId = Future<String> Function();

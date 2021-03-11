@@ -1,4 +1,3 @@
-import 'package:meta/meta.dart';
 import 'package:update_available_platform_interface/update_available_platform_interface.dart';
 
 import 'domain/get_ios_bundle_id.dart';
@@ -15,9 +14,9 @@ class UpdateAvailablePlugin extends UpdateAvailablePlatform {
   final GetIOSPackageVersion getIOSPackageVersion;
 
   UpdateAvailablePlugin({
-    @required this.getIOSBundleId,
-    @required this.getIOSVersion,
-    @required this.getIOSPackageVersion,
+    required this.getIOSBundleId,
+    required this.getIOSVersion,
+    required this.getIOSPackageVersion,
   });
 
   @override
@@ -27,8 +26,8 @@ class UpdateAvailablePlugin extends UpdateAvailablePlatform {
       final packageVersion = await getIOSPackageVersion(bundleId);
       final version = await getIOSVersion();
 
-      if (version == null) {
-        throw NullThrownError();
+      if (version == null || packageVersion == null) {
+        return UnknownAvailability;
       }
 
       return packageVersion > version ? UpdateAvailable : NoUpdateAvailable;

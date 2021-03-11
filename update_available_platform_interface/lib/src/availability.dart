@@ -10,6 +10,8 @@ import 'package:meta/meta.dart';
 /// To check against the status, the recommended way is to use [fold] or
 /// [foldElse], as they are safest than comparing with `if`, because it forces
 /// you to provide every possible case.
+
+@immutable
 class Availability {
   final _Availability _availability;
 
@@ -38,14 +40,10 @@ class Availability {
   ///
   /// If you don't want to exhaustively check for each case, refer to [foldElse].
   T fold<T>({
-    @required T Function() available,
-    @required T Function() notAvailable,
-    @required T Function() unknown,
+    required T Function() available,
+    required T Function() notAvailable,
+    required T Function() unknown,
   }) {
-    assert(available != null);
-    assert(notAvailable != null);
-    assert(unknown != null);
-
     if (_availability == _Availability.UpdateAvailable) {
       return available();
     } else if (_availability == _Availability.NoUpdateAvailable) {
@@ -75,13 +73,11 @@ class Availability {
   /// }
   /// ```
   T foldElse<T>({
-    T Function() available,
-    T Function() notAvailable,
-    T Function() unknown,
-    @required T Function() orElse,
+    T Function()? available,
+    T Function()? notAvailable,
+    T Function()? unknown,
+    required T Function() orElse,
   }) {
-    assert(orElse != null);
-
     if (available != null && _availability == _Availability.UpdateAvailable) {
       return available();
     } else if (notAvailable != null &&

@@ -43,6 +43,7 @@ class _UpdateAvailableExampleState extends State<UpdateAvailableExample> {
             ),
             const SizedBox(height: 16.0),
             Button(
+              onTap: _onTap,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
@@ -52,7 +53,6 @@ class _UpdateAvailableExampleState extends State<UpdateAvailableExample> {
                   ),
                 ),
               ),
-              onTap: _onTap,
             ),
           ],
         ),
