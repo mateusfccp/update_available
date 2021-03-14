@@ -15,7 +15,7 @@
 
  ```yaml
  dependencies:
-    update_available: ^1
+    update_available: ^2.0.0
  ```
 
  Update your packages with `flutter pub get`.
