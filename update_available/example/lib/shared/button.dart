@@ -4,12 +4,12 @@ import 'colors.dart';
 
 class Button extends StatelessWidget {
   const Button({
-    Key key,
-    @required this.child,
+    Key? key,
+    required this.child,
     this.onTap,
   }) : super(key: key);
 
-  final VoidCallback onTap;
+  final VoidCallback? onTap;
   final Widget child;
 
   @override
@@ -18,7 +18,7 @@ class Button extends StatelessWidget {
       onTap: onTap,
       child: Container(
         decoration: BoxDecoration(
-          color: Red,
+          color: red,
           borderRadius: BorderRadius.circular(100),
         ),
         alignment: Alignment.center,

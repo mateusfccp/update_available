@@ -5,11 +5,11 @@ import 'shared/button.dart';
 import 'shared/colors.dart';
 
 void main() {
-  runApp(UpdateAvailableExample());
+  runApp(const UpdateAvailableExample());
 }
 
 class UpdateAvailableExample extends StatefulWidget {
-  UpdateAvailableExample({Key key}) : super(key: key);
+  const UpdateAvailableExample({Key? key}) : super(key: key);
 
   @override
   _UpdateAvailableExampleState createState() => _UpdateAvailableExampleState();
@@ -21,7 +21,7 @@ class _UpdateAvailableExampleState extends State<UpdateAvailableExample> {
   @override
   Widget build(BuildContext context) {
     return WidgetsApp(
-      color: Green,
+      color: green,
       pageRouteBuilder: <T>(RouteSettings settings, WidgetBuilder builder) {
         return PageRouteBuilder(
           pageBuilder: (context, __, ___) => builder(context),
@@ -29,23 +29,23 @@ class _UpdateAvailableExampleState extends State<UpdateAvailableExample> {
       },
       home: Container(
         padding: const EdgeInsets.all(24.0),
-        color: Green,
+        color: green,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               text,
               textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Red,
+              style: const TextStyle(
+                color: red,
                 fontWeight: FontWeight.bold,
               ),
             ),
             const SizedBox(height: 16.0),
             Button(
               onTap: _onTap,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
+              child: const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: Text(
                   'Check for update!',
                   style: TextStyle(
@@ -69,10 +69,9 @@ class _UpdateAvailableExampleState extends State<UpdateAvailableExample> {
 
     setState(() {
       text = availability.fold(
-        available: () => 'There\'s an update available!',
-        notAvailable: () => 'There\'s no update available!',
-        unknown: () => 'Sorry, couldn\'t determine if there is or not '
-            'an available update!',
+        available: () => "There's an update available!",
+        notAvailable: () => "There's no update available!",
+        unknown: () => "Sorry, couldn't determine if there is or not an available update!",
       );
     });
   }

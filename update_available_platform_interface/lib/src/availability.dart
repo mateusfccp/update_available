@@ -1,8 +1,10 @@
+// ignore_for_file: constant_identifier_names
+
 import 'package:meta/meta.dart';
 
 /// The availability of the update.
 ///
-/// An udpdate may be available or not, which will be represented with
+/// An update may be available or not, which will be represented with
 /// [UpdateAvailable] and [NoUpdateAvailable], respectively. Finally, if
 /// the process couldn't determine if a update is available or not, an
 /// [UnknownAvailability] will be yielded.
@@ -53,7 +55,7 @@ class Availability {
     }
   }
 
-  /// Returns a value based on the [Availability], non-exhaustivelty.
+  /// Returns a value based on the [Availability], non-exhaustively.
   ///
   /// Instead of passing all the cases exhaustively, only [orElse] is mandatory,
   /// while all others are optional.
@@ -80,11 +82,9 @@ class Availability {
   }) {
     if (available != null && _availability == _Availability.UpdateAvailable) {
       return available();
-    } else if (notAvailable != null &&
-        _availability == _Availability.NoUpdateAvailable) {
+    } else if (notAvailable != null && _availability == _Availability.NoUpdateAvailable) {
       return notAvailable();
-    } else if (unknown != null &&
-        _availability == _Availability.UnknownAvailability) {
+    } else if (unknown != null && _availability == _Availability.UnknownAvailability) {
       return unknown();
     } else {
       return orElse();
@@ -92,11 +92,13 @@ class Availability {
   }
 
   @override
-  String toString() => fold(
-        available: () => 'Update available',
-        notAvailable: () => 'No update available',
-        unknown: () => 'Unknown availability',
-      );
+  String toString() {
+    return fold(
+      available: () => 'Update available',
+      notAvailable: () => 'No update available',
+      unknown: () => 'Unknown availability',
+    );
+  }
 }
 
 enum _Availability {

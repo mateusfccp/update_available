@@ -2,7 +2,7 @@ import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 import 'availability.dart';
 
-/// The plarform interface for update_available.
+/// The platform interface for update_available.
 abstract class UpdateAvailablePlatform extends PlatformInterface {
   UpdateAvailablePlatform() : super(token: _token);
 
@@ -25,9 +25,7 @@ abstract class UpdateAvailablePlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<Availability> getUpdateAvailability() => throw UnimplementedError(
-        'getUpdateAvailability() has not been implemented.',
-      );
+  Future<Availability> getUpdateAvailability() => throw UnimplementedError('getUpdateAvailability() has not been implemented.');
 }
 
 /// The unimplemented platform for [UpdateAvailablePlatform].
