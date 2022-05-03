@@ -20,7 +20,3 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   pedantic: ^1.11.0
-
-dependency_overrides:
-  update_available_platform_interface:
-    path: ../update_available_platform_interface

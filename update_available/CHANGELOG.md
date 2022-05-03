@@ -1,6 +1,6 @@
 ## 2.1.0
 
-- Migrate to `package_info_plus` for iOS
+- Replace `package_info`, which is deprecated, with `package_info_plus`
 
 # 2.0.0
 
