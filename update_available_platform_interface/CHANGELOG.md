@@ -1,3 +1,7 @@
+## 2.1.0
+
+- No documented changes
+
 ## 2.0.0
 
 - *Null-safety* bump to stable

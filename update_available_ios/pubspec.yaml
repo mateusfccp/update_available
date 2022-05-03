@@ -1,6 +1,6 @@
 name: update_available_ios
 description: iOS platform implementation of update_available
-version: 2.0.0
+version: 2.1.0
 repository: https://github.com/mateusfccp/update_available/tree/master/update_available_ios
 
 environment:
@@ -12,11 +12,15 @@ dependencies:
     sdk: flutter
   http: ^0.13.0
   meta: ^1.3.0
-  package_info: ^2.0.0
-  update_available_platform_interface: ^2.0.0
+  package_info_plus: ^1.2.0
+  update_available_platform_interface: ^2.1.0
   pub_semver: ^2.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   pedantic: ^1.11.0
+
+dependency_overrides:
+  update_available_platform_interface:
+    path: ../update_available_platform_interface

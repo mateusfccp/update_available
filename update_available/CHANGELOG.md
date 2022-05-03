@@ -1,3 +1,7 @@
+## 2.1.0
+
+- Migrate to `package_info_plus` for iOS
+
 # 2.0.0
 
 - *Null-safety* bump to stable
