@@ -10,8 +10,9 @@ void main() {
       // Arrange
       final plugin = UpdateAvailablePlugin(
         getIOSBundleId: () async => 'fakeId',
-        getIOSPackageVersion: (_) async => null,
+        getIOSPackageVersion: (_, __) async => null,
         getIOSVersion: () async => Version(1, 0, 0),
+        appStoreRegion: 'us',
       );
 
       // Assert
@@ -25,8 +26,9 @@ void main() {
       // Arrange
       final plugin = UpdateAvailablePlugin(
         getIOSBundleId: () async => 'fakeId',
-        getIOSPackageVersion: (_) async => Version(1, 0, 0),
+        getIOSPackageVersion: (_, __) async => Version(1, 0, 0),
         getIOSVersion: () async => null,
+        appStoreRegion: 'us',
       );
 
       // Assert
@@ -40,8 +42,9 @@ void main() {
       // Arrange
       final plugin = UpdateAvailablePlugin(
         getIOSBundleId: () async => 'fakeId',
-        getIOSPackageVersion: (_) async => Version(1, 1, 0),
+        getIOSPackageVersion: (_, __) async => Version(1, 1, 0),
         getIOSVersion: () async => Version(1, 0, 0),
+        appStoreRegion: 'us',
       );
 
       // Assert
@@ -55,8 +58,9 @@ void main() {
       // Arrange
       final plugin = UpdateAvailablePlugin(
         getIOSBundleId: () async => 'fakeId',
-        getIOSPackageVersion: (_) async => Version(1, 0, 0),
+        getIOSPackageVersion: (_, __) async => Version(1, 0, 0),
         getIOSVersion: () async => Version(1, 0, 0),
+        appStoreRegion: 'us',
       );
 
       // Assert
@@ -70,8 +74,9 @@ void main() {
       // Arrange
       final plugin = UpdateAvailablePlugin(
         getIOSBundleId: () async => 'fakeId',
-        getIOSPackageVersion: (_) async => Version(1, 0, 0),
+        getIOSPackageVersion: (_, __) async => Version(1, 0, 0),
         getIOSVersion: () async => Version(1, 1, 0),
+        appStoreRegion: 'us',
       );
 
       // Assert

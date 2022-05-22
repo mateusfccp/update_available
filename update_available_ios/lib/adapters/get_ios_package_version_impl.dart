@@ -4,10 +4,12 @@ import 'package:pub_semver/pub_semver.dart';
 import '../domain/get_ios_package_version.dart';
 import 'json.dart';
 
-const _lookupURL = 'https://itunes.apple.com/lookup';
+const _itunesURL = 'https://itunes.apple.com';
 
-final GetIOSPackageVersion httpGetIOSPackageVersion = (String bundleId) async {
-  final uri = Uri.parse('$_lookupURL?bundleId=$bundleId');
+final GetIOSPackageVersion httpGetIOSPackageVersion =
+    (String appStoreRegion, String bundleId) async {
+  final uri =
+      Uri.parse('$_itunesURL/$appStoreRegion/lookup?bundleId=$bundleId');
   final response = await get(uri);
   final versionString = getStringByKey(response.body)('version');
 

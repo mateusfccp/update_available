@@ -31,7 +31,7 @@ export 'package:update_available_platform_interface/update_available_platform_in
 ///   print(text);
 /// }
 /// ```
-Future<Availability> getUpdateAvailability() {
+Future<Availability> getUpdateAvailability({String appStoreRegion = 'us'}) {
   if (Platform.isAndroid) {
     return android.UpdateAvailablePlugin().getUpdateAvailability();
   } else if (Platform.isIOS) {
@@ -39,6 +39,7 @@ Future<Availability> getUpdateAvailability() {
       getIOSBundleId: ios.pluginGetIOSBundleId,
       getIOSPackageVersion: ios.httpGetIOSPackageVersion,
       getIOSVersion: ios.pluginGetIOSVersion,
+      appStoreRegion: appStoreRegion,
     ).getUpdateAvailability();
   } else {
     return UpdateAvailablePlatform.instance.getUpdateAvailability();

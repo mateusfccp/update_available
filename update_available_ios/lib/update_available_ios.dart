@@ -12,18 +12,21 @@ class UpdateAvailablePlugin extends UpdateAvailablePlatform {
   final GetIOSBundleId getIOSBundleId;
   final GetIOSVersion getIOSVersion;
   final GetIOSPackageVersion getIOSPackageVersion;
+  final String appStoreRegion;
 
   UpdateAvailablePlugin({
     required this.getIOSBundleId,
     required this.getIOSVersion,
     required this.getIOSPackageVersion,
+    required this.appStoreRegion,
   });
 
   @override
   Future<Availability> getUpdateAvailability() async {
     try {
       final bundleId = await getIOSBundleId();
-      final packageVersion = await getIOSPackageVersion(bundleId);
+      final packageVersion =
+          await getIOSPackageVersion(appStoreRegion, bundleId);
       final version = await getIOSVersion();
 
       if (version == null || packageVersion == null) {
