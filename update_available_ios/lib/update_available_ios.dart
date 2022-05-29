@@ -28,10 +28,10 @@ class UpdateAvailablePlugin extends UpdateAvailablePlatform {
 
       if (version == null || packageVersion == null) {
         return UnknownAvailability;
+      } else {
+        return packageVersion > version ? UpdateAvailable : NoUpdateAvailable;
       }
-
-      return packageVersion > version ? UpdateAvailable : NoUpdateAvailable;
-    } catch (_) {
+    } catch (error, stackTrace) {
       return UnknownAvailability;
     }
   }

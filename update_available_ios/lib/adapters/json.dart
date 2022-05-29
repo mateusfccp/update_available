@@ -1,2 +1,5 @@
-String? Function(String json) getStringByKey(String json) =>
-    (String key) => RegExp('"$key":\\s*"([^"]*)"').firstMatch(json)?.group(1);
+String? Function(String json) getStringByKey(String json) {
+  return (String key) {
+    return RegExp('"$key":\\s*"([^"]*)"').firstMatch(json)?.group(1);
+  };
+}
