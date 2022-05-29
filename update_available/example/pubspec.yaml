@@ -1,6 +1,6 @@
 name: update_available_example
 description: Example for update_available package.
-version: 1.0.0
+version: 1.1.0
 repository: https://github.com/mateusfccp/update_available/tree/master/update_available
 publish_to: none
 

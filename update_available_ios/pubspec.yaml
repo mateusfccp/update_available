@@ -20,3 +20,10 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^1.0.4
+
+flutter:
+  plugin:
+    implements: update_available
+    platforms:
+      ios:
+        dartPluginClass: UpdateAvailablePlugin

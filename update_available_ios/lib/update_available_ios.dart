@@ -1,5 +1,8 @@
 import 'package:update_available_platform_interface/update_available_platform_interface.dart';
 
+import 'adapters/get_ios_bundle_id_impl.dart';
+import 'adapters/get_ios_package_version_impl.dart';
+import 'adapters/get_ios_version_impl.dart';
 import 'domain/get_ios_bundle_id.dart';
 import 'domain/get_ios_package_version.dart';
 import 'domain/get_ios_version.dart';
@@ -18,6 +21,14 @@ class UpdateAvailablePlugin extends UpdateAvailablePlatform {
     required this.getIOSVersion,
     required this.getIOSPackageVersion,
   });
+
+  static void registerWith() {
+    UpdateAvailablePlatform.instance = UpdateAvailablePlugin(
+      getIOSBundleId: pluginGetIOSBundleId(),
+      getIOSPackageVersion: httpGetIOSPackageVersion(),
+      getIOSVersion: pluginGetIOSVersion(),
+    );
+  }
 
   @override
   Future<Availability> getUpdateAvailability() async {

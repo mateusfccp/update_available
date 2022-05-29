@@ -6,6 +6,10 @@ import 'package:update_available_platform_interface/update_available_platform_in
 class UpdateAvailablePlugin extends UpdateAvailablePlatform {
   static const platform = MethodChannel('me.mateusfccp/update_available');
 
+  static void registerWith() {
+    UpdateAvailablePlatform.instance = UpdateAvailablePlugin();
+  }
+
   @override
   Future<Availability> getUpdateAvailability() async {
     try {
