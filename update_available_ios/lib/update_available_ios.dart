@@ -42,7 +42,7 @@ class UpdateAvailablePlugin extends UpdateAvailablePlatform {
       } else {
         return packageVersion > version ? UpdateAvailable : NoUpdateAvailable;
       }
-    } catch (error, stackTrace) {
+    } catch (error) {
       return UnknownAvailability;
     }
   }
