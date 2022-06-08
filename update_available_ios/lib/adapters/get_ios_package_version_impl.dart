@@ -8,7 +8,7 @@ const _itunesURL = 'https://itunes.apple.com';
 
 GetIOSPackageVersion httpGetIOSPackageVersion() {
   return (String bundleId, {String? appStoreRegion}) async {
-    Uri uri;
+    final Uri uri;
 
     if (appStoreRegion == null) {
       uri = Uri.parse('$_itunesURL/$appStoreRegion/lookup?bundleId=$bundleId');
