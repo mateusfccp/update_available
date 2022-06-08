@@ -22,13 +22,15 @@
 
  ## Usage
 
- `update_available` provides a single function, `getUpdateAvailability`. This function is assynchronous, and will thus return a `Future<Availability>`.
+ `update_available` provides a single function, `getUpdateAvailability`. This function is assynchronous, and will thus return a `Future<Availability>`. 
 
  `Availability` is an object with three possible state:
 
   * `UnknownAvailability`, for when the function couldn't determine the availability of an upgrade, possibly caused by an error.
   * `NoUpdateAvailable`, for when there's no update available, i.e. the installed app is up to date.
   * `UpdateAvailable`, for when there's an update available, i.e. the installed app is not the last version published.
+
+You can also set the named parameter `iosAppStoreRegion` for that function to specify the region (according to ISO 3166-1 alpha-2) in which the iOS version will be checked.
 
 To exhaustively check against these three possibilities, `Availability` provides the `fold` and `foldElse` functions, which receive functions for each case and thus guarantee compile-time exhaustive check.
 

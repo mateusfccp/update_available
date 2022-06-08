@@ -25,7 +25,7 @@ abstract class UpdateAvailablePlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<Availability> getUpdateAvailability() {
+  Future<Availability> getUpdateAvailability({String? iosAppStoreRegion}) {
     const message = 'getUpdateAvailability() has not been implemented.';
     throw UnimplementedError(message);
   }

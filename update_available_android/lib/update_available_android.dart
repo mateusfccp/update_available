@@ -11,7 +11,7 @@ class UpdateAvailablePlugin extends UpdateAvailablePlatform {
   }
 
   @override
-  Future<Availability> getUpdateAvailability() async {
+  Future<Availability> getUpdateAvailability({String? iosAppStoreRegion}) async {
     try {
       final available = await platform.invokeMethod('getUpdateAvailability');
       return available ? UpdateAvailable : NoUpdateAvailable;

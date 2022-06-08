@@ -4,6 +4,8 @@ export 'package:update_available_platform_interface/update_available_platform_in
 
 /// Checks if there is an update available for the application.
 ///
+/// If the `iosAppStoreRegion` is set, the iOS version is checked in the specified region.
+///
 /// This method returns the [Availability] of the update.
 ///
 /// Example:
@@ -22,6 +24,6 @@ export 'package:update_available_platform_interface/update_available_platform_in
 ///   print(text);
 /// }
 /// ```
-Future<Availability> getUpdateAvailability() {
-  return UpdateAvailablePlatform.instance.getUpdateAvailability();
+Future<Availability> getUpdateAvailability({String? iosAppStoreRegion}) {
+  return UpdateAvailablePlatform.instance.getUpdateAvailability(iosAppStoreRegion: iosAppStoreRegion);
 }
