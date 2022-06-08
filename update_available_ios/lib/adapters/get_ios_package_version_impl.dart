@@ -11,9 +11,9 @@ GetIOSPackageVersion httpGetIOSPackageVersion() {
     final Uri uri;
 
     if (appStoreRegion == null) {
-      uri = Uri.parse('$_itunesURL/$appStoreRegion/lookup?bundleId=$bundleId');
-    } else {
       uri = Uri.parse('$_itunesURL/lookup?bundleId=$bundleId');
+    } else {
+      uri = Uri.parse('$_itunesURL/$appStoreRegion/lookup?bundleId=$bundleId');
     }
 
     final response = await get(uri);
