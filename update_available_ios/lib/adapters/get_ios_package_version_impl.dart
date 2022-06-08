@@ -7,13 +7,13 @@ import 'json.dart';
 const _itunesURL = 'https://itunes.apple.com';
 
 GetIOSPackageVersion httpGetIOSPackageVersion() {
-  return (String bundleId, {String? appStoreRegion}) async {
+  return (String bundleId, {String? iosAppStoreRegion}) async {
     final Uri uri;
 
-    if (appStoreRegion == null) {
+    if (iosAppStoreRegion == null) {
       uri = Uri.parse('$_itunesURL/lookup?bundleId=$bundleId');
     } else {
-      uri = Uri.parse('$_itunesURL/$appStoreRegion/lookup?bundleId=$bundleId');
+      uri = Uri.parse('$_itunesURL/$iosAppStoreRegion/lookup?bundleId=$bundleId');
     }
 
     final response = await get(uri);
