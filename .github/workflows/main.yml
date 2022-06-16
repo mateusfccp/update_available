@@ -22,7 +22,7 @@ jobs:
         channel: 'stable'
     - run: flutter pub get
       working-directory: update_available
-    - run: flutter format -o none --set-exit-if-changed .
+    - run: flutter format -o show -l 200 --set-exit-if-changed .
       working-directory: update_available
     - run: flutter analyze --no-pub --no-congratulate
       working-directory: update_available
