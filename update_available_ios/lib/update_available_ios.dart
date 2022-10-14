@@ -31,10 +31,12 @@ class UpdateAvailablePlugin extends UpdateAvailablePlatform {
   }
 
   @override
-  Future<Availability> getUpdateAvailability({String? iosAppStoreRegion}) async {
+  Future<Availability> getUpdateAvailability(
+      {String? iosAppStoreRegion}) async {
     try {
       final bundleId = await getIOSBundleId();
-      final packageVersion = await getIOSPackageVersion(bundleId, iosAppStoreRegion: iosAppStoreRegion);
+      final packageVersion = await getIOSPackageVersion(bundleId,
+          iosAppStoreRegion: iosAppStoreRegion);
       final version = await getIOSVersion();
 
       if (version == null || packageVersion == null) {

@@ -82,9 +82,11 @@ class Availability {
   }) {
     if (available != null && _availability == _Availability.UpdateAvailable) {
       return available();
-    } else if (notAvailable != null && _availability == _Availability.NoUpdateAvailable) {
+    } else if (notAvailable != null &&
+        _availability == _Availability.NoUpdateAvailable) {
       return notAvailable();
-    } else if (unknown != null && _availability == _Availability.UnknownAvailability) {
+    } else if (unknown != null &&
+        _availability == _Availability.UnknownAvailability) {
       return unknown();
     } else {
       return orElse();
