@@ -1,3 +1,7 @@
+## 2.2.1
+
+- Update package_info_plus to 3.0.1
+
 ## 2.1.0
 
 - Replace `package_info`, which is deprecated, with `package_info_plus`
