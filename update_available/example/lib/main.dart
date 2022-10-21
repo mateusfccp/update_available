@@ -71,8 +71,7 @@ class _UpdateAvailableExampleState extends State<UpdateAvailableExample> {
       text = availability.fold(
         available: () => "There's an update available!",
         notAvailable: () => "There's no update available!",
-        unknown: () =>
-            "Sorry, couldn't determine if there is or not an available update!",
+        unknown: () => "Sorry, couldn't determine if there is or not an available update!",
       );
     });
   }

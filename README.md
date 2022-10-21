@@ -5,10 +5,10 @@
 
 ## Features
 
-* Provide a simple, single function to get update availability for your Android or iOS app.
-* Version checking based on published app version.
-* Foldable structure so that you have compile-time exhaustive check.
+ * Provide a simple, single function to get update availability for your Android or iOS app.
+ * Version checking based on published app version.
+ * Foldable structure so that you have compile-time exhaustive check.
 
-## Documentation
+ ## Documentation
 
-For the full documentation, refer to [the pub.dev page](https://pub.dev/packages/update_available).
+ For the full documentation, refer to [the pub.dev page](https://pub.dev/packages/update_available).
