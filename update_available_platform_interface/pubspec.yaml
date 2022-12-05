@@ -4,7 +4,7 @@ version: 2.2.0-dev.1
 repository: https://github.com/mateusfccp/update_available/tree/master/update_available_platform_interface
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: ">=2.15.0 <3.0.0"
 
 dependencies:
   meta: ^1.7.0
