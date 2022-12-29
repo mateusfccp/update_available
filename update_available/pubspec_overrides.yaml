@@ -1,0 +1,7 @@
+dependency_overrides:
+  update_available_android:
+    path: ../update_available_android
+  update_available_ios:
+    path: ../update_available_ios
+  update_available_platform_interface:
+    path: ../update_available_platform_interface
