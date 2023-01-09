@@ -68,3 +68,16 @@ jobs:
     - run: flutter pub get
     - run: flutter format -o show -l 200 --set-exit-if-changed .
     - run: flutter analyze --no-pub --no-congratulate
+  checks_min_sdk_on_update_available:
+    name: Checks Min SDK on update_available
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: update_available
+    steps:
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v2
+        with:
+          version: '2.8.0'
+          channel: 'stable'
+      - run: flutter pub get
