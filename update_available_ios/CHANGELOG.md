@@ -1,3 +1,8 @@
+## 2.2.0
+
+- Update dependencies
+- Use federated plugin structure for iOS (#7)
+
 ## 2.1.0
 
 - Replace `package_info`, which is deprecated, with `package_info_plus`

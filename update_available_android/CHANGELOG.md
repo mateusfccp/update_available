@@ -1,3 +1,10 @@
+## 2.2.0
+
+- Update dependencies
+- Update to plugin v2
+- Fix error that happened when using the package with other packages that used the Google API (#18)
+  - Thanks to @otopba for identifying the issue and providing the PR!
+
 # 2.0.0
 
 - *Null-safety* bump to stable

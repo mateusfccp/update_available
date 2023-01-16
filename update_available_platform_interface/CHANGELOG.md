@@ -1,3 +1,8 @@
+## 3.0.0
+
+- Update dependencies
+- *Breaking change:* now, the method `getUpdateAvailability` has an optional named parameter `String? iosAppStoreRegion` (#11)
+
 ## 2.0.0
 
 - *Null-safety* bump to stable
