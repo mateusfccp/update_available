@@ -20,7 +20,7 @@
 
 - Replace `package_info`, which is deprecated, with `package_info_plus`
 
-# 2.0.0
+## 2.0.0
 
 - *Null-safety* bump to stable
 - Dependencies versions bump
