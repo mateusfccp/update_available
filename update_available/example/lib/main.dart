@@ -12,7 +12,7 @@ class UpdateAvailableExample extends StatefulWidget {
   const UpdateAvailableExample({Key? key}) : super(key: key);
 
   @override
-  _UpdateAvailableExampleState createState() => _UpdateAvailableExampleState();
+  State<UpdateAvailableExample> createState() => _UpdateAvailableExampleState();
 }
 
 class _UpdateAvailableExampleState extends State<UpdateAvailableExample> {
@@ -24,7 +24,7 @@ class _UpdateAvailableExampleState extends State<UpdateAvailableExample> {
       color: green,
       pageRouteBuilder: <T>(RouteSettings settings, WidgetBuilder builder) {
         return PageRouteBuilder(
-          pageBuilder: (context, __, ___) => builder(context),
+          pageBuilder: (context, animation, secondaryAnimation) => builder(context),
         );
       },
       home: Container(

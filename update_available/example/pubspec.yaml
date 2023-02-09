@@ -9,11 +9,13 @@ environment:
   flutter: ">=2.8.0"
 
 dependencies:
+  flutter:
+    sdk: flutter
   update_available:
     path: ..
 
 dev_dependencies:
-  flutter_lints: ^1.0.4
+  flutter_lints: ^2.0.0
 
 dependency_overrides:
   update_available_android:
