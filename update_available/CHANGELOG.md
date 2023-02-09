@@ -1,4 +1,10 @@
+## 2.2.1
+
+- Fixed critical issue that made the plugin break on Android (#21). Thanks to @kuhnroyal for solving the issue!
+
 ## 2.2.0
+
+**Warning:** This version has a critical issue and won't work on Android (#21). Please, use 2.2.1 instead.
 
 - Update dependencies
   - Specially, the package `package_info_plus` version was preventing this package to be used with updated Flutter dependencies
