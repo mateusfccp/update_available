@@ -1,6 +1,6 @@
 name: update_available_ios
 description: iOS platform implementation of update_available
-version: 2.2.0
+version: 2.2.1
 repository: https://github.com/mateusfccp/update_available/tree/master/update_available_ios
 
 environment:
@@ -26,4 +26,4 @@ flutter:
     implements: update_available
     platforms:
       ios:
-        dartPluginClass: UpdateAvailablePlugin
+        dartPluginClass: UpdateAvailableIosPlugin

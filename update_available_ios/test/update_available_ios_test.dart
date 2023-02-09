@@ -8,7 +8,7 @@ void main() {
     "should return UnknownAvailability when can't determine the package version",
     () async {
       // Arrange
-      final plugin = UpdateAvailablePlugin(
+      final plugin = UpdateAvailableIosPlugin(
         getIOSBundleId: () async => 'fakeId',
         getIOSPackageVersion: (_, {iosAppStoreRegion}) async => null,
         getIOSVersion: () async => Version(1, 0, 0),
@@ -23,7 +23,7 @@ void main() {
     "should return UnknownAvailability when can't determine the current version",
     () async {
       // Arrange
-      final plugin = UpdateAvailablePlugin(
+      final plugin = UpdateAvailableIosPlugin(
         getIOSBundleId: () async => 'fakeId',
         getIOSPackageVersion: (_, {iosAppStoreRegion}) async => Version(1, 0, 0),
         getIOSVersion: () async => null,
@@ -38,7 +38,7 @@ void main() {
     'should return UpdateAvailable when current version is lower than published',
     () async {
       // Arrange
-      final plugin = UpdateAvailablePlugin(
+      final plugin = UpdateAvailableIosPlugin(
         getIOSBundleId: () async => 'fakeId',
         getIOSPackageVersion: (_, {iosAppStoreRegion}) async => Version(1, 1, 0),
         getIOSVersion: () async => Version(1, 0, 0),
@@ -53,7 +53,7 @@ void main() {
     'should return NoUpdateAvailable when current version is equal to published',
     () async {
       // Arrange
-      final plugin = UpdateAvailablePlugin(
+      final plugin = UpdateAvailableIosPlugin(
         getIOSBundleId: () async => 'fakeId',
         getIOSPackageVersion: (_, {iosAppStoreRegion}) async => Version(1, 0, 0),
         getIOSVersion: () async => Version(1, 0, 0),
@@ -68,7 +68,7 @@ void main() {
     'should return NoUpdateAvailable when current version is bigger than published',
     () async {
       // Arrange
-      final plugin = UpdateAvailablePlugin(
+      final plugin = UpdateAvailableIosPlugin(
         getIOSBundleId: () async => 'fakeId',
         getIOSPackageVersion: (_, {iosAppStoreRegion}) async => Version(1, 0, 0),
         getIOSVersion: () async => Version(1, 1, 0),
