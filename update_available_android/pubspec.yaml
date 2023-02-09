@@ -1,6 +1,6 @@
 name: update_available_android
 description: Android platform implementation of update_available
-version: 2.2.0
+version: 2.2.1
 repository: https://github.com/mateusfccp/update_available/tree/master/update_available_android
 
 environment:
@@ -17,7 +17,9 @@ dev_dependencies:
 
 flutter:
   plugin:
+    implements: update_available
     platforms:
       android:
         package: me.mateusfccp.update_available_android
         pluginClass: UpdateAvailableAndroidPlugin
+        dartPluginClass: UpdateAvailableAndroidPlugin

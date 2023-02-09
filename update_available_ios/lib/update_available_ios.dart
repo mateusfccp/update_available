@@ -11,19 +11,19 @@ export 'adapters/get_ios_bundle_id_impl.dart';
 export 'adapters/get_ios_package_version_impl.dart';
 export 'adapters/get_ios_version_impl.dart';
 
-class UpdateAvailablePlugin extends UpdateAvailablePlatform {
+class UpdateAvailableIosPlugin extends UpdateAvailablePlatform {
   final GetIOSBundleId getIOSBundleId;
   final GetIOSVersion getIOSVersion;
   final GetIOSPackageVersion getIOSPackageVersion;
 
-  UpdateAvailablePlugin({
+  UpdateAvailableIosPlugin({
     required this.getIOSBundleId,
     required this.getIOSVersion,
     required this.getIOSPackageVersion,
   });
 
   static void registerWith() {
-    UpdateAvailablePlatform.instance = UpdateAvailablePlugin(
+    UpdateAvailablePlatform.instance = UpdateAvailableIosPlugin(
       getIOSBundleId: pluginGetIOSBundleId(),
       getIOSPackageVersion: httpGetIOSPackageVersion(),
       getIOSVersion: pluginGetIOSVersion(),

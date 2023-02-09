@@ -3,11 +3,11 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 import 'package:update_available_platform_interface/update_available_platform_interface.dart';
 
-class UpdateAvailablePlugin extends UpdateAvailablePlatform {
+class UpdateAvailableAndroidPlugin extends UpdateAvailablePlatform {
   static const platform = MethodChannel('me.mateusfccp/update_available');
 
   static void registerWith() {
-    UpdateAvailablePlatform.instance = UpdateAvailablePlugin();
+    UpdateAvailablePlatform.instance = UpdateAvailableAndroidPlugin();
   }
 
   @override
