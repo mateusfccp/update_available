@@ -1,3 +1,7 @@
+## 2.3.0
+
+- Update `package_info_plus` version range
+
 ## 2.2.0
 
 - Update dependencies
