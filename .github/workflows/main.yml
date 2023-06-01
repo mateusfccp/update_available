@@ -24,7 +24,7 @@ jobs:
       with:
         channel: 'stable'
     - run: flutter pub get
-    - run: flutter format -o show -l 200 --set-exit-if-changed .
+    - run: dart format -o show -l 200 --set-exit-if-changed .
     - run: flutter analyze --no-pub --no-congratulate
   checks_on_update_available_android:
     name: Checks on update_available_android
@@ -38,7 +38,7 @@ jobs:
       with:
         channel: 'stable'
     - run: flutter pub get
-    - run: flutter format -o show -l 200 --set-exit-if-changed .
+    - run: dart format -o show -l 200 --set-exit-if-changed .
     - run: flutter analyze --no-pub --no-congratulate
   checks_on_update_available_ios:
     name: Checks on update_available_ios
@@ -52,7 +52,7 @@ jobs:
       with:
         channel: 'stable'
     - run: flutter pub get
-    - run: flutter format -o show -l 200 --set-exit-if-changed .
+    - run: dart format -o show -l 200 --set-exit-if-changed .
     - run: flutter analyze --no-pub --no-congratulate
     - run: flutter test
   checks_on_update_available_platform_interface:
@@ -67,7 +67,7 @@ jobs:
       with:
         channel: 'stable'
     - run: flutter pub get
-    - run: flutter format -o show -l 200 --set-exit-if-changed .
+    - run: dart format -o show -l 200 --set-exit-if-changed .
     - run: flutter analyze --no-pub --no-congratulate
   checks_minimum_sdk_on_update_available:
     name: Checks minimum SDK version on update_available
