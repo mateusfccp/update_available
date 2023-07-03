@@ -1,12 +1,12 @@
 name: update_available_example
 description: Example for update_available package.
-version: 1.1.0
+version: 2.0.0
 repository: https://github.com/mateusfccp/update_available/tree/master/update_available
 publish_to: none
 
 environment:
-  sdk: ">=2.16.0 <3.0.0"
-  flutter: ">=2.10.0"
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.10.0"
 
 dependencies:
   flutter:
@@ -15,7 +15,7 @@ dependencies:
     path: ..
 
 dev_dependencies:
-  flutter_lints: ^2.0.0
+  flutter_lints: ^2.0.2
 
 dependency_overrides:
   update_available_android:

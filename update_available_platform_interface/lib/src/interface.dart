@@ -32,4 +32,4 @@ abstract class UpdateAvailablePlatform extends PlatformInterface {
 }
 
 /// The unimplemented platform for [UpdateAvailablePlatform].
-class UnimplementedUpdateAvailable extends UpdateAvailablePlatform {}
+final class UnimplementedUpdateAvailable extends UpdateAvailablePlatform {}

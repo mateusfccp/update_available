@@ -38,12 +38,12 @@ class UpdateAvailableIosPlugin extends UpdateAvailablePlatform {
       final version = await getIOSVersion();
 
       if (version == null || packageVersion == null) {
-        return UnknownAvailability;
+        return const UnknownAvailability();
       } else {
-        return packageVersion > version ? UpdateAvailable : NoUpdateAvailable;
+        return packageVersion > version ? const UpdateAvailable() : const NoUpdateAvailable();
       }
     } catch (error) {
-      return UnknownAvailability;
+      return const UnknownAvailability();
     }
   }
 }
