@@ -22,7 +22,7 @@
 
  ## Usage
 
- `update_available` provides a single function, `getUpdateAvailability`. This function is assynchronous, and will thus return a `Future<Availability>`. 
+ `update_available` provides a single function, `getUpdateAvailability`. This function is asynchronous, and will thus return a `Future<Availability>`.
 
  `Availability` is an object with three possible state:
 
@@ -65,7 +65,7 @@ These are the two packages that I came through when looking for a solution for u
 
  * Both of them provided user interfaces regarding the availability.
  * `upgrader` is not reliable when dealing with Android unless you use Appcast.
- * I wanted the bare minimum neccessary.
+ * I wanted the bare minimum necessary.
 
 So, `update_available` is better fit to you if:
  * You want support for both iOS and Android.
