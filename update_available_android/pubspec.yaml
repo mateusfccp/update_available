@@ -1,16 +1,16 @@
 name: update_available_android
 description: Android platform implementation of update_available
-version: 2.2.1
+version: 2.2.2
 repository: https://github.com/mateusfccp/update_available/tree/master/update_available_android
 
 environment:
-  sdk: ">=2.15.0 <3.0.0"
-  flutter: ">=2.8.0"
+  sdk: ">=2.16.0 <3.0.0"
+  flutter: ">=2.10.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  update_available_platform_interface: ^3.0.0
+  update_available_platform_interface: ^3.0.1
 
 dev_dependencies:
   flutter_lints: ^2.0.0
