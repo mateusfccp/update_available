@@ -1,6 +1,7 @@
 ## 2.3.0
 
 - Update `package_info_plus` version range
+- Update `http` version range
 
 ## 2.2.0
 
