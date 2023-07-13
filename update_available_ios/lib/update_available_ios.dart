@@ -11,7 +11,7 @@ export 'adapters/get_ios_bundle_id_impl.dart';
 export 'adapters/get_ios_package_version_impl.dart';
 export 'adapters/get_ios_version_impl.dart';
 
-class UpdateAvailableIosPlugin extends UpdateAvailablePlatform {
+final class UpdateAvailableIosPlugin extends UpdateAvailablePlatform {
   final GetIOSBundleId getIOSBundleId;
   final GetIOSVersion getIOSVersion;
   final GetIOSPackageVersion getIOSPackageVersion;
