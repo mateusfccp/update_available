@@ -3,7 +3,7 @@ import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 import 'availability.dart';
 
 /// The platform interface for update_available.
-abstract class UpdateAvailablePlatform extends PlatformInterface {
+abstract base class UpdateAvailablePlatform extends PlatformInterface {
   UpdateAvailablePlatform() : super(token: _token);
 
   static final Object _token = Object();

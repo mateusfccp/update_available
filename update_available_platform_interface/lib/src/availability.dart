@@ -3,13 +3,12 @@ import 'package:meta/meta.dart';
 /// The availability of the update.
 ///
 /// An update may be available or not, which will be represented with
-/// [UpdateAvailable] and [NoUpdateAvailable], respectively. Finally, if
-/// the process couldn't determine if a update is available or not, an
-/// [UnknownAvailability] will be yielded.
+/// [UpdateAvailable] and [NoUpdateAvailable], respectively. If the process
+/// couldn't determine if an update is available or not, an
+/// [UnknownAvailability] will be returned.
 ///
-/// To check against the status, the recommended way is to use [fold] or
-/// [foldElse], as they are safest than comparing with `if`, because it forces
-/// you to provide every possible case.
+/// To check against the status, the recommended way is using `switch`, as
+/// the class is sealed and Dart will guarantee exhaustiveness.
 @immutable
 sealed class Availability {}
 
