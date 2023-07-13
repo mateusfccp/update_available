@@ -1,3 +1,7 @@
+## 3.0.0
+
+- Requires Dart 3.0 or later
+
 ## 2.3.0
 
 - Minimum Dart SDK versions is now 2.16

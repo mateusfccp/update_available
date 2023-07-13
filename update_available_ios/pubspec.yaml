@@ -1,6 +1,6 @@
 name: update_available_ios
 description: iOS platform implementation of update_available
-version: 3.0.0
+version: 3.0.0-dev.1
 repository: https://github.com/mateusfccp/update_available/tree/master/update_available_ios
 
 environment:
@@ -14,7 +14,7 @@ dependencies:
   meta: ^1.9.1
   package_info_plus: ^4.0.2
   pub_semver: ^2.1.4
-  update_available_platform_interface: ^3.1.0
+  update_available_platform_interface: ^4.0.0
 
 dev_dependencies:
   flutter_test:

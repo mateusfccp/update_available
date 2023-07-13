@@ -1,3 +1,10 @@
+## 3.0.0
+
+- Require Dart 3.0 or later
+- Add `base`, `final`, and `sealed` modifiers to some classes
+- Remove `when` and `whenOrElse` methods from `Availability`
+  - Now that `Availability` is `sealed`, you should use `switch` instead
+
 ## 2.3.0
 
 - Bumped Kotlin version to 1.5.31, as required by Flutter 2.10 and greater (fixes #28)
