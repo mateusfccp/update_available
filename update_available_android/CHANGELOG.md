@@ -1,3 +1,8 @@
+## 2.3.0
+
+- Minimum Dart SDK versions is now 2.16
+- Updated some dependencies versions
+
 ## 2.2.1
 
 - Fixed critical issue that made the plugin break on Android (#21). Thanks to @kuhnroyal for solving the issue!

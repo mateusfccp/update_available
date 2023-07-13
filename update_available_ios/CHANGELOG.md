@@ -1,6 +1,7 @@
 ## 2.3.0
 
-- Update `package_info_plus` version range
+- Minimum Dart SDK versions is now 2.16
+- Updated some dependencies versions
 
 ## 2.2.0
 
@@ -31,7 +32,7 @@
 
 ## 1.0.1+1c
 
-- Revert changes on `pubspec.yaml`, as pub.dev won't accept a plugin declaration without native integration.
+- Revert changes on `pubspec.yaml`, as pub.dev won't accept a plugin declaration without native integration
 
 ## 1.0.1+1b
 

@@ -1,3 +1,10 @@
+## 2.3.0
+
+- Bumped Kotlin version to 1.5.31, as required by Flutter 2.10 and greater (fixes #28)
+  - Because of this, minimum Dart SDK versions is now 2.16
+- Updated some dependencies versions
+- `package_info_plus` on iOS updated to `^4.0.2`
+
 ## 2.2.1
 
 - Fixed critical issue that made the plugin break on Android (#21). Thanks to @kuhnroyal for solving the issue!
