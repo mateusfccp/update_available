@@ -1,6 +1,6 @@
 name: update_available_ios
 description: iOS platform implementation of update_available
-version: 3.0.0-dev.1
+version: 3.0.0-dev.2
 repository: https://github.com/mateusfccp/update_available/tree/master/update_available_ios
 
 environment:

@@ -1,6 +1,7 @@
 ## 3.0.0
 
 - Requires Dart 3.0 or later
+- `UpdateAvailableIosPlugin` can't be implemented, extended or mixed anymore
 
 ## 2.3.0
 
