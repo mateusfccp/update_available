@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 import 'package:update_available_platform_interface/update_available_platform_interface.dart';
 
-class UpdateAvailableAndroidPlugin extends UpdateAvailablePlatform {
+final class UpdateAvailableAndroidPlugin extends UpdateAvailablePlatform {
   static const platform = MethodChannel('me.mateusfccp/update_available');
 
   static void registerWith() {
