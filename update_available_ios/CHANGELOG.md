@@ -2,6 +2,8 @@
 
 - Requires Dart 3.0 or later
 - `UpdateAvailableIosPlugin` can't be implemented, extended or mixed anymore
+- `http` removed from the dependencies
+- Provide some additional tests
 
 ## 2.3.0
 

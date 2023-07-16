@@ -13,8 +13,13 @@ final class UpdateAvailableAndroidPlugin extends UpdateAvailablePlatform {
   @override
   Future<Availability> getUpdateAvailability({String? iosAppStoreRegion}) async {
     try {
-      final available = await platform.invokeMethod('getUpdateAvailability');
-      return available ? const UpdateAvailable() : const NoUpdateAvailable();
+      final available = await platform.invokeMethod<bool>('getUpdateAvailability');
+
+      return switch (available) {
+        true => const UpdateAvailable(),
+        false => const NoUpdateAvailable(),
+        null => const UnknownAvailability(),
+      };
     } on PlatformException {
       return const UnknownAvailability();
     }

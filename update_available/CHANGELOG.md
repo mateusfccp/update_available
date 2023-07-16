@@ -4,6 +4,8 @@
 - Add `base`, `final`, and `sealed` modifiers to some classes
 - Remove `when` and `whenOrElse` methods from `Availability`
   - Now that `Availability` is `sealed`, you should use `switch` instead
+- Use `HttpClient` instead of the `http` package, removing the later from the dependencies
+- Provide more tests
 
 ## 2.3.0
 
