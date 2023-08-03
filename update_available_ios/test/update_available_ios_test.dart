@@ -16,7 +16,7 @@ void main() {
         );
 
         // Assert
-        expect(await plugin.getUpdateAvailability(), UnknownAvailability);
+        expect(await plugin.getUpdateAvailability(), const UnknownAvailability());
       },
     );
 
@@ -31,7 +31,7 @@ void main() {
         );
 
         // Assert
-        expect(await plugin.getUpdateAvailability(), UnknownAvailability);
+        expect(await plugin.getUpdateAvailability(), const UnknownAvailability());
       },
     );
 
@@ -46,7 +46,7 @@ void main() {
         );
 
         // Assert
-        expect(await plugin.getUpdateAvailability(), UpdateAvailable);
+        expect(await plugin.getUpdateAvailability(), const UpdateAvailable());
       },
     );
 
@@ -61,7 +61,7 @@ void main() {
         );
 
         // Assert
-        expect(await plugin.getUpdateAvailability(), NoUpdateAvailable);
+        expect(await plugin.getUpdateAvailability(), const NoUpdateAvailable());
       },
     );
 
@@ -76,7 +76,7 @@ void main() {
         );
 
         // Assert
-        expect(await plugin.getUpdateAvailability(), NoUpdateAvailable);
+        expect(await plugin.getUpdateAvailability(), const NoUpdateAvailable());
       },
     );
   });
