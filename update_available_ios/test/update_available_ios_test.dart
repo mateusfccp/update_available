@@ -4,78 +4,80 @@ import 'package:update_available_ios/update_available_ios.dart';
 import 'package:update_available_platform_interface/update_available_platform_interface.dart';
 
 void main() {
-  test(
-    "should return UnknownAvailability when can't determine the package version",
-    () async {
-      // Arrange
-      final plugin = UpdateAvailableIosPlugin(
-        getIOSBundleId: () async => 'fakeId',
-        getIOSPackageVersion: (_, {iosAppStoreRegion}) async => null,
-        getIOSVersion: () async => Version(1, 0, 0),
-      );
+  group('getUpdateAvailability', () {
+    test(
+      "should return UnknownAvailability when can't determine the package version",
+      () async {
+        // Arrange
+        final plugin = UpdateAvailableIosPlugin(
+          getIOSBundleId: () async => 'fakeId',
+          getIOSPackageVersion: (_, {iosAppStoreRegion}) async => null,
+          getIOSVersion: () async => Version(1, 0, 0),
+        );
 
-      // Assert
-      expect(await plugin.getUpdateAvailability(), UnknownAvailability);
-    },
-  );
+        // Assert
+        expect(await plugin.getUpdateAvailability(), const UnknownAvailability());
+      },
+    );
 
-  test(
-    "should return UnknownAvailability when can't determine the current version",
-    () async {
-      // Arrange
-      final plugin = UpdateAvailableIosPlugin(
-        getIOSBundleId: () async => 'fakeId',
-        getIOSPackageVersion: (_, {iosAppStoreRegion}) async => Version(1, 0, 0),
-        getIOSVersion: () async => null,
-      );
+    test(
+      "should return UnknownAvailability when can't determine the current version",
+      () async {
+        // Arrange
+        final plugin = UpdateAvailableIosPlugin(
+          getIOSBundleId: () async => 'fakeId',
+          getIOSPackageVersion: (_, {iosAppStoreRegion}) async => Version(1, 0, 0),
+          getIOSVersion: () async => null,
+        );
 
-      // Assert
-      expect(await plugin.getUpdateAvailability(), UnknownAvailability);
-    },
-  );
+        // Assert
+        expect(await plugin.getUpdateAvailability(), const UnknownAvailability());
+      },
+    );
 
-  test(
-    'should return UpdateAvailable when current version is lower than published',
-    () async {
-      // Arrange
-      final plugin = UpdateAvailableIosPlugin(
-        getIOSBundleId: () async => 'fakeId',
-        getIOSPackageVersion: (_, {iosAppStoreRegion}) async => Version(1, 1, 0),
-        getIOSVersion: () async => Version(1, 0, 0),
-      );
+    test(
+      'should return UpdateAvailable when current version is lower than published',
+      () async {
+        // Arrange
+        final plugin = UpdateAvailableIosPlugin(
+          getIOSBundleId: () async => 'fakeId',
+          getIOSPackageVersion: (_, {iosAppStoreRegion}) async => Version(1, 1, 0),
+          getIOSVersion: () async => Version(1, 0, 0),
+        );
 
-      // Assert
-      expect(await plugin.getUpdateAvailability(), UpdateAvailable);
-    },
-  );
+        // Assert
+        expect(await plugin.getUpdateAvailability(), const UpdateAvailable());
+      },
+    );
 
-  test(
-    'should return NoUpdateAvailable when current version is equal to published',
-    () async {
-      // Arrange
-      final plugin = UpdateAvailableIosPlugin(
-        getIOSBundleId: () async => 'fakeId',
-        getIOSPackageVersion: (_, {iosAppStoreRegion}) async => Version(1, 0, 0),
-        getIOSVersion: () async => Version(1, 0, 0),
-      );
+    test(
+      'should return NoUpdateAvailable when current version is equal to published',
+      () async {
+        // Arrange
+        final plugin = UpdateAvailableIosPlugin(
+          getIOSBundleId: () async => 'fakeId',
+          getIOSPackageVersion: (_, {iosAppStoreRegion}) async => Version(1, 0, 0),
+          getIOSVersion: () async => Version(1, 0, 0),
+        );
 
-      // Assert
-      expect(await plugin.getUpdateAvailability(), NoUpdateAvailable);
-    },
-  );
+        // Assert
+        expect(await plugin.getUpdateAvailability(), const NoUpdateAvailable());
+      },
+    );
 
-  test(
-    'should return NoUpdateAvailable when current version is bigger than published',
-    () async {
-      // Arrange
-      final plugin = UpdateAvailableIosPlugin(
-        getIOSBundleId: () async => 'fakeId',
-        getIOSPackageVersion: (_, {iosAppStoreRegion}) async => Version(1, 0, 0),
-        getIOSVersion: () async => Version(1, 1, 0),
-      );
+    test(
+      'should return NoUpdateAvailable when current version is bigger than published',
+      () async {
+        // Arrange
+        final plugin = UpdateAvailableIosPlugin(
+          getIOSBundleId: () async => 'fakeId',
+          getIOSPackageVersion: (_, {iosAppStoreRegion}) async => Version(1, 0, 0),
+          getIOSVersion: () async => Version(1, 1, 0),
+        );
 
-      // Assert
-      expect(await plugin.getUpdateAvailability(), NoUpdateAvailable);
-    },
-  );
+        // Assert
+        expect(await plugin.getUpdateAvailability(), const NoUpdateAvailable());
+      },
+    );
+  });
 }

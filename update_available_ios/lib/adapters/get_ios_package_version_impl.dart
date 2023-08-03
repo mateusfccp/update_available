@@ -1,4 +1,6 @@
-import 'package:http/http.dart';
+import 'dart:convert';
+import 'dart:io';
+
 import 'package:pub_semver/pub_semver.dart';
 
 import '../domain/get_ios_package_version.dart';
@@ -16,8 +18,12 @@ GetIOSPackageVersion httpGetIOSPackageVersion() {
       uri = Uri.parse('$_itunesURL/$iosAppStoreRegion/lookup?bundleId=$bundleId');
     }
 
-    final response = await get(uri);
-    final versionString = getStringByKey(response.body)('version');
+    final client = HttpClient();
+    final request = await client.getUrl(uri);
+    final response = await request.close();
+    final responseBody = await response.transform(utf8.decoder).join();
+
+    final versionString = getStringByKey(responseBody)('version');
 
     if (versionString == null) {
       return null;

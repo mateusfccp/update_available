@@ -1,3 +1,10 @@
+## 4.0.0
+
+- Requires Dart 3.0 or later
+- `UpdateAvailablePlatform` can't be implemented anymore (just extended)
+- `Availability` is now a `sealed` class
+- Removed `when` and `whenOrElse` from `Availability`
+
 ## 3.1.0
 
 - Minimum Dart SDK versions is now 2.16

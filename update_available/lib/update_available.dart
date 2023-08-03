@@ -13,13 +13,11 @@ export 'package:update_available_platform_interface/update_available_platform_in
 /// void main() async {
 ///   final updateAvailability = await getUpdateAvailability();
 ///
-///   final text = updateAvailability.fold(
-///     available: () => "There's an update to you app! Please, update it "
-///                      "so you have access to the latest features!",
-///     notAvailable: () => 'No update is available for your app.',
-///     unknown: () => "It was not possible to determine if there is or not "
-///                    "an update for your app.",
-///   );
+///   text = switch (availability) {
+///     UpdateAvailable() => "There's an update available!",
+///     NoUpdateAvailable() => "There's no update available!",
+///     UnknownAvailability() => "Sorry, couldn't determine if there is or not an available update!",
+///   };
 ///
 ///   print(text);
 /// }

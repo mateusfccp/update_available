@@ -11,7 +11,7 @@ export 'adapters/get_ios_bundle_id_impl.dart';
 export 'adapters/get_ios_package_version_impl.dart';
 export 'adapters/get_ios_version_impl.dart';
 
-class UpdateAvailableIosPlugin extends UpdateAvailablePlatform {
+final class UpdateAvailableIosPlugin extends UpdateAvailablePlatform {
   final GetIOSBundleId getIOSBundleId;
   final GetIOSVersion getIOSVersion;
   final GetIOSPackageVersion getIOSPackageVersion;
@@ -38,12 +38,12 @@ class UpdateAvailableIosPlugin extends UpdateAvailablePlatform {
       final version = await getIOSVersion();
 
       if (version == null || packageVersion == null) {
-        return UnknownAvailability;
+        return const UnknownAvailability();
       } else {
-        return packageVersion > version ? UpdateAvailable : NoUpdateAvailable;
+        return packageVersion > version ? const UpdateAvailable() : const NoUpdateAvailable();
       }
     } catch (error) {
-      return UnknownAvailability;
+      return const UnknownAvailability();
     }
   }
 }

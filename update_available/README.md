@@ -7,7 +7,8 @@
 
  * Provide a simple, single function to get update availability for your Android or iOS app.
  * Version checking based on published app version.
- * Foldable structure so that you have compile-time exhaustive check.
+ * ~~Foldable structure so that you have compile-time exhaustive check.~~
+   * Since version 3.0 (with Dart 3.0), exhaustive check is done by using `switch`, as `Availability` is now a `sealed class`.
 
  ## Getting started
 
@@ -15,7 +16,7 @@
 
  ```yaml
  dependencies:
-    update_available: ^2.0.0
+    update_available: ^3.0.0
  ```
 
  Update your packages with `flutter pub get`.
@@ -32,7 +33,7 @@
 
 You can also set the named parameter `iosAppStoreRegion` for that function to specify the region (according to ISO 3166-1 alpha-2) in which the iOS version will be checked.
 
-To exhaustively check against these three possibilities, `Availability` provides the `fold` and `foldElse` functions, which receive functions for each case and thus guarantee compile-time exhaustive check.
+To exhaustively check against these three possibilities, use a `switch`, as `Availability` is a `sealed class`.
 
 You can get more details about `Availability` in the [source code](https://github.com/mateusfccp/update_available/blob/master/update_available_platform_interface/lib/src/availability.dart).
 
@@ -42,13 +43,13 @@ You can get more details about `Availability` in the [source code](https://githu
 void printAvailability() async {
     final updateAvailability = await getUpdateAvailability();
 
-    final text = updateAvailability.fold(
-        available: () => "There's an update to you app! Please, update it "
-                         "so you have access to the latest features!",
-        notAvailable: () => 'No update is available for your app.',
-        unknown: () => "It was not possible to determine if there is or not "
-                       "an update for your app.",
-    );
+    final text = switch (availability) {
+      UpdateAvailable() => "There's an update to you app! Please, update it "
+                           "so you have access to the latest features!",
+      NoUpdateAvailable() => 'No update is available for your app.',
+      UnknownAvailability() => "It was not possible to determine if there is or not "
+                               "an update for your app.",
+    };
 
     print(text);
 }

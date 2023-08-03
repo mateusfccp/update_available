@@ -68,11 +68,11 @@ class _UpdateAvailableExampleState extends State<UpdateAvailableExample> {
     final availability = await getUpdateAvailability();
 
     setState(() {
-      text = availability.fold(
-        available: () => "There's an update available!",
-        notAvailable: () => "There's no update available!",
-        unknown: () => "Sorry, couldn't determine if there is or not an available update!",
-      );
+      text = switch (availability) {
+        UpdateAvailable() => "There's an update available!",
+        NoUpdateAvailable() => "There's no update available!",
+        UnknownAvailability() => "Sorry, couldn't determine if there is or not an available update!",
+      };
     });
   }
 }
