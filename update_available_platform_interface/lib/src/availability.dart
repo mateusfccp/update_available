@@ -27,4 +27,3 @@ final class NoUpdateAvailable implements Availability {
 final class UnknownAvailability implements Availability {
   const UnknownAvailability();
 }
-
