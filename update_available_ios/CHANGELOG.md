@@ -1,3 +1,7 @@
+## 3.0.1
+
+- Supported `package_info_plus` 5
+
 ## 3.0.0
 
 - Requires Dart 3.0 or later
