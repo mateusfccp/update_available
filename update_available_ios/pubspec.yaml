@@ -13,7 +13,7 @@ dependencies:
   meta: ^1.9.1
   package_info_plus: ">=4.0.2 <6.0.0"
   pub_semver: ^2.1.4
-  update_available_platform_interface: ^4.0.0
+  update_available_platform_interface: ^4.0.1
 
 dev_dependencies:
   flutter_test:

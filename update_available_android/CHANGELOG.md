@@ -1,3 +1,7 @@
+## 3.0.1
+
+- Upgraded `flutter_lints` to `^3.0.1`
+
 ## 3.0.0
 
 - Requires Dart 3.0 or later

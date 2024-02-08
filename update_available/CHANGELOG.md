@@ -1,3 +1,10 @@
+## 3.0.1
+
+- Support for `package_info_plus: ^5.0` on iOS
+- Upgraded `flutter_lints` to `^3.0.1`
+
+Thanks to @kuhnroyal for these changes!
+
 ## 3.0.0
 
 - Require Dart 3.0 or later

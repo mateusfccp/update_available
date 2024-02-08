@@ -1,6 +1,7 @@
 ## 3.0.1
 
 - Supported `package_info_plus` 5
+- Upgraded `flutter_lints` to `^3.0.1`
 
 ## 3.0.0
 
