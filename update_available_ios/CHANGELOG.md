@@ -1,6 +1,6 @@
 ## 3.0.2
 
-- Supported `package_info_plus: 6.0.0`
+- Supported `package_info_plus: '>=4.0.2 <8.0.0'`
 
 ## 3.0.1
 
