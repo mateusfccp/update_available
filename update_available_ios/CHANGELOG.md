@@ -1,4 +1,4 @@
-## 3.0.2
+## 3.1.0
 
 - Supported `package_info_plus: '>=4.0.2 <8.0.0'`
 
