@@ -1,3 +1,9 @@
+## UNRELEASED
+
+- Add support for Android namespace
+- Bump `compileSdkVersion` to 34
+- Update `com.google.android.play:app-update` to `2.1.0`
+
 ## 3.0.1
 
 - Upgraded `flutter_lints` to `^3.0.1`
