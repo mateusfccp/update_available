@@ -1,4 +1,4 @@
-## UNRELEASED
+## 3.1.0
 
 - Add support for Android namespace
 - Bump `compileSdkVersion` to 34
