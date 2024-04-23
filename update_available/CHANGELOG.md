@@ -2,13 +2,13 @@
 
 - Support for Android namespace
 - Update to Android `compileSdkVersion 34`
-- Support for `package_info_plus: 6/7` on iOS
-- Upgraded `flutter_lints` to `^3.0.2`
+- Support for `package_info_plus: '>=4.0.2 <9.0.0'` on iOS
+- Upgrade `flutter_lints` to `^3.0.2`
 
 ## 3.0.1
 
 - Support for `package_info_plus: ^5.0` on iOS
-- Upgraded `flutter_lints` to `^3.0.1`
+- Upgrade `flutter_lints` to `^3.0.1`
 
 Thanks to @kuhnroyal for these changes!
 
