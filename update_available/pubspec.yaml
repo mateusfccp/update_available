@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   update_available_android: ^3.0.0
-  update_available_ios: ^3.0.1
+  update_available_ios: ^3.0.2
   update_available_platform_interface: ^4.0.1
 
 dev_dependencies:
