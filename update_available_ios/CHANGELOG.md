@@ -1,11 +1,11 @@
 ## 3.0.2
 
-- Supported `package_info_plus: '>=4.0.2 <9.0.0'`
+- Support `package_info_plus: '>=4.0.2 <9.0.0'`
 
 ## 3.0.1
 
-- Supported `package_info_plus` 5
-- Upgraded `flutter_lints` to `^3.0.1`
+- Support `package_info_plus: ^5.0`
+- Upgrade `flutter_lints` to `^3.0.1`
 
 ## 3.0.0
 
