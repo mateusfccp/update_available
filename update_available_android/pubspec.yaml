@@ -1,6 +1,6 @@
 name: update_available_android
 description: Android platform implementation of update_available
-version: 3.0.1
+version: 3.1.0
 repository: https://github.com/mateusfccp/update_available/tree/master/update_available_android
 
 environment:
@@ -13,7 +13,7 @@ dependencies:
   update_available_platform_interface: ^4.0.1
 
 dev_dependencies:
-  flutter_lints: ^3.0.1
+  flutter_lints: ^3.0.2
 
 flutter:
   plugin:
