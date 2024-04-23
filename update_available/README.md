@@ -7,8 +7,6 @@
 
  * Provide a simple, single function to get update availability for your Android or iOS app.
  * Version checking based on published app version.
- * ~~Foldable structure so that you have compile-time exhaustive check.~~
-   * Since version 3.0 (with Dart 3.0), exhaustive check is done by using `switch`, as `Availability` is now a `sealed class`.
 
  ## Getting started
 
