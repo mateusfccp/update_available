@@ -12,10 +12,12 @@ GetIOSPackageVersion httpGetIOSPackageVersion() {
   return (String bundleId, {String? iosAppStoreRegion}) async {
     final Uri uri;
 
+    // Busting iTunes CDN cache
+    final timestamp = DateTime.now().millisecondsSinceEpoch;
     if (iosAppStoreRegion == null) {
-      uri = Uri.parse('$_itunesURL/lookup?bundleId=$bundleId');
+      uri = Uri.parse('$_itunesURL/lookup?bundleId=$bundleId&_=$timestamp');
     } else {
-      uri = Uri.parse('$_itunesURL/$iosAppStoreRegion/lookup?bundleId=$bundleId');
+      uri = Uri.parse('$_itunesURL/$iosAppStoreRegion/lookup?bundleId=$bundleId&_=$timestamp');
     }
 
     final client = HttpClient();
