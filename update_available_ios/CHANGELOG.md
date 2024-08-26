@@ -1,3 +1,7 @@
+## Unreleased
+
+- Bust iTunes cache when fetching the published plugin version (see #45)
+
 ## 3.0.2
 
 - Support `package_info_plus: '>=4.0.2 <9.0.0'`
