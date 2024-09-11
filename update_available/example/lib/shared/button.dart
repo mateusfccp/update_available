@@ -2,12 +2,12 @@ import 'package:flutter/widgets.dart';
 
 import 'colors.dart';
 
-class Button extends StatelessWidget {
+final class Button extends StatelessWidget {
   const Button({
-    Key? key,
+    super.key,
     required this.child,
     this.onTap,
-  }) : super(key: key);
+  });
 
   final VoidCallback? onTap;
   final Widget child;
