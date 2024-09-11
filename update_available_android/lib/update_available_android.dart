@@ -18,10 +18,13 @@ final class UpdateAvailableAndroidPlugin extends UpdateAvailablePlatform {
       return switch (available) {
         true => const UpdateAvailable(),
         false => const NoUpdateAvailable(),
-        null => const UnknownAvailability(),
+        null => throw StateError("The implementation should return either 'true' or 'false'. This means that there's an issue with the implementation."),
       };
-    } on PlatformException {
-      return const UnknownAvailability();
+    } on PlatformException catch (error, stackTrace) {
+      return UnknownAvailability(
+        error: error,
+        stackTrace: stackTrace,
+      );
     }
   }
 }

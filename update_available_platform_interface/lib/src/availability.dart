@@ -22,8 +22,22 @@ final class NoUpdateAvailable implements Availability {
   const NoUpdateAvailable();
 }
 
-/// Represents that it was not possible to determine if an update is available
-/// or not.
+/// Represents that it was not possible to determine if an update is available.
 final class UnknownAvailability implements Availability {
-  const UnknownAvailability();
+  const UnknownAvailability({
+    this.error,
+    this.stackTrace,
+  });
+
+  /// The error that made it impossible to determine the availability.
+  ///
+  /// It will only be non-null if a [PlatformException] is thrown form the
+  /// method channel.
+  final Object? error;
+
+  /// The stack trace associated with [error].
+  ///
+  /// It will only be non-null if a [PlatformException] is thrown form the
+  /// method channel.
+  final StackTrace? stackTrace;
 }
