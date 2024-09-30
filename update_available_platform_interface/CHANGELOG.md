@@ -1,3 +1,8 @@
+## 4.1.0
+
+- Provide error information on `UnkownAvailability` object for when the method channel returns a `PlatformException`
+- Upgrade dependencies
+
 ## 4.0.1
 
 - Upgraded `flutter_lints` to `^3.0.1`

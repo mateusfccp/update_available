@@ -1,6 +1,6 @@
 name: update_available_platform_interface
 description: A common platform interface for the update_available plugin.
-version: 4.0.1
+version: 4.1.0
 repository: https://github.com/mateusfccp/update_available/tree/master/update_available_platform_interface
 
 environment:
@@ -8,7 +8,7 @@ environment:
 
 dependencies:
   meta: ^1.9.1
-  plugin_platform_interface: ^2.1.4
+  plugin_platform_interface: ^2.1.8
 
 dev_dependencies:
-  flutter_lints: ^3.0.2
+  flutter_lints: ^5.0.0

@@ -1,3 +1,8 @@
+## 3.2.0
+
+- Allow bigger Kotlin/Gradle versions
+- Upgrade dependencies
+
 ## 3.1.0
 
 - Add support for Android namespace

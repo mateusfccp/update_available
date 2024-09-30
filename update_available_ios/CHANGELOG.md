@@ -1,6 +1,7 @@
-## Unreleased
+## 3.1.0
 
-- Bust iTunes cache when fetching the published plugin version (see #45)
+- Bust iTunes cache when fetching the published plugin version (fixes #45)
+- Upgrade dependencies
 
 ## 3.0.2
 

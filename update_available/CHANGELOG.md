@@ -1,3 +1,10 @@
+## 3.2.0
+
+- Allow bigger Kotlin/Gradle versions (fixes #43)
+- Bust iTunes cache when fetching the published plugin version (fixes #45)
+  - Thanks to @millerf for the contribution!
+- Upgrade dependencies
+
 ## 3.1.0
 
 - Support for Android namespace
