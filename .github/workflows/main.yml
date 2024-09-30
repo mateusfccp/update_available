@@ -19,7 +19,7 @@ jobs:
       run:
         working-directory: update_available
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: subosito/flutter-action@v2
       with:
         channel: 'stable'
@@ -33,7 +33,7 @@ jobs:
       run:
         working-directory: update_available_android
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: subosito/flutter-action@v2
       with:
         channel: 'stable'
@@ -47,7 +47,7 @@ jobs:
       run:
         working-directory: update_available_ios
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: subosito/flutter-action@v2
       with:
         channel: 'stable'
@@ -62,7 +62,7 @@ jobs:
       run:
         working-directory: update_available_platform_interface
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: subosito/flutter-action@v2
       with:
         channel: 'stable'
@@ -76,7 +76,7 @@ jobs:
       run:
         working-directory: update_available
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
         with:
           version: '2.8.0'
