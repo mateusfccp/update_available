@@ -9,7 +9,7 @@ void main() {
 }
 
 class UpdateAvailableExample extends StatefulWidget {
-  const UpdateAvailableExample({Key? key}) : super(key: key);
+  const UpdateAvailableExample({super.key});
 
   @override
   State<UpdateAvailableExample> createState() => _UpdateAvailableExampleState();
