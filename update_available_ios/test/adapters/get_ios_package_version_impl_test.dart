@@ -11,7 +11,8 @@ void main() {
       expect(version, isNull);
     });
 
-    test('should get the latest version of getVersion given bundle ID', () async {
+    test('should get the latest version of getVersion given bundle ID',
+        () async {
       final version = await getVersion('org.adventistas.armsa');
       expect(version, isNotNull);
       version as Version;

@@ -23,5 +23,6 @@ export 'package:update_available_platform_interface/update_available_platform_in
 /// }
 /// ```
 Future<Availability> getUpdateAvailability({String? iosAppStoreRegion}) {
-  return UpdateAvailablePlatform.instance.getUpdateAvailability(iosAppStoreRegion: iosAppStoreRegion);
+  return UpdateAvailablePlatform.instance
+      .getUpdateAvailability(iosAppStoreRegion: iosAppStoreRegion);
 }
