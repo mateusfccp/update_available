@@ -11,17 +11,14 @@ final class UpdateAvailableAndroidPlugin extends UpdateAvailablePlatform {
   }
 
   @override
-  Future<Availability> getUpdateAvailability(
-      {String? iosAppStoreRegion}) async {
+  Future<Availability> getUpdateAvailability({String? iosAppStoreRegion}) async {
     try {
-      final available =
-          await platform.invokeMethod<bool>('getUpdateAvailability');
+      final available = await platform.invokeMethod<bool>('getUpdateAvailability');
 
       return switch (available) {
         true => const UpdateAvailable(),
         false => const NoUpdateAvailable(),
-        null => throw StateError(
-            "The implementation should return either 'true' or 'false'. This means that there's an issue with the implementation."),
+        null => throw StateError("The implementation should return either 'true' or 'false'. This means that there's an issue with the implementation."),
       };
     } on PlatformException catch (error, stackTrace) {
       return UnknownAvailability(

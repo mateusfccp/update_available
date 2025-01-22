@@ -16,8 +16,7 @@ void main() {
         );
 
         // Assert
-        expect(
-            await plugin.getUpdateAvailability(), const UnknownAvailability());
+        expect(await plugin.getUpdateAvailability(), const UnknownAvailability());
       },
     );
 
@@ -27,14 +26,12 @@ void main() {
         // Arrange
         final plugin = UpdateAvailableIosPlugin(
           getIOSBundleId: () async => 'fakeId',
-          getIOSPackageVersion: (_, {iosAppStoreRegion}) async =>
-              Version(1, 0, 0),
+          getIOSPackageVersion: (_, {iosAppStoreRegion}) async => Version(1, 0, 0),
           getIOSVersion: () async => null,
         );
 
         // Assert
-        expect(
-            await plugin.getUpdateAvailability(), const UnknownAvailability());
+        expect(await plugin.getUpdateAvailability(), const UnknownAvailability());
       },
     );
 
@@ -44,8 +41,7 @@ void main() {
         // Arrange
         final plugin = UpdateAvailableIosPlugin(
           getIOSBundleId: () async => 'fakeId',
-          getIOSPackageVersion: (_, {iosAppStoreRegion}) async =>
-              Version(1, 1, 0),
+          getIOSPackageVersion: (_, {iosAppStoreRegion}) async => Version(1, 1, 0),
           getIOSVersion: () async => Version(1, 0, 0),
         );
 
@@ -60,8 +56,7 @@ void main() {
         // Arrange
         final plugin = UpdateAvailableIosPlugin(
           getIOSBundleId: () async => 'fakeId',
-          getIOSPackageVersion: (_, {iosAppStoreRegion}) async =>
-              Version(1, 0, 0),
+          getIOSPackageVersion: (_, {iosAppStoreRegion}) async => Version(1, 0, 0),
           getIOSVersion: () async => Version(1, 0, 0),
         );
 
@@ -76,8 +71,7 @@ void main() {
         // Arrange
         final plugin = UpdateAvailableIosPlugin(
           getIOSBundleId: () async => 'fakeId',
-          getIOSPackageVersion: (_, {iosAppStoreRegion}) async =>
-              Version(1, 0, 0),
+          getIOSPackageVersion: (_, {iosAppStoreRegion}) async => Version(1, 0, 0),
           getIOSVersion: () async => Version(1, 1, 0),
         );
 

@@ -24,8 +24,7 @@ class _UpdateAvailableExampleState extends State<UpdateAvailableExample> {
       color: green,
       pageRouteBuilder: <T>(RouteSettings settings, WidgetBuilder builder) {
         return PageRouteBuilder(
-          pageBuilder: (context, animation, secondaryAnimation) =>
-              builder(context),
+          pageBuilder: (context, animation, secondaryAnimation) => builder(context),
         );
       },
       home: Container(
@@ -72,8 +71,7 @@ class _UpdateAvailableExampleState extends State<UpdateAvailableExample> {
       text = switch (availability) {
         UpdateAvailable() => "There's an update available!",
         NoUpdateAvailable() => "There's no update available!",
-        UnknownAvailability() =>
-          "Sorry, couldn't determine if there is or not an available update!",
+        UnknownAvailability() => "Sorry, couldn't determine if there is or not an available update!",
       };
     });
   }
