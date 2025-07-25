@@ -1,3 +1,8 @@
+## 3.1.0+1
+
+- Update lint dependencies
+- Reformat code
+
 ## 3.1.0
 
 - Bust iTunes cache when fetching the published plugin version (fixes #45)

@@ -1,3 +1,7 @@
+## 4.1.0+1
+
+- Update lint dependency
+
 ## 4.1.0
 
 - Provide error information on `UnkownAvailability` object for when the method channel returns a `PlatformException`

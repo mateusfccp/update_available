@@ -1,3 +1,8 @@
+## 3.2.0+1
+
+- Update lint dependencies
+- Reformat code
+
 ## 3.2.0
 
 - Allow bigger Kotlin/Gradle versions

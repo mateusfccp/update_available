@@ -1,6 +1,6 @@
 name: update_available_ios
 description: iOS platform implementation of update_available
-version: 3.1.0
+version: 3.1.0+1
 repository: https://github.com/mateusfccp/update_available/tree/master/update_available_ios
 
 environment:
@@ -18,7 +18,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
+  flutter_lints: ^6.0.0
   test: ^1.25.7
 
 flutter:
