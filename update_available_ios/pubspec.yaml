@@ -10,8 +10,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  meta: ^1.9.1
-  package_info_plus: ">=4.0.2 <9.0.0"
+  meta: '>=1.9.1 <2.0.0'
+  package_info_plus: '>=4.0.2 <10.0.0'
   pub_semver: ^2.1.4
   update_available_platform_interface: ^4.1.0
 
