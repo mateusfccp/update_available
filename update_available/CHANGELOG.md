@@ -1,3 +1,8 @@
+## 3.3.0
+
+- Upgrade Kotlin/Gradle versions
+- Upgrade dependencies
+
 ## 3.2.1
 
 - Relax dependencies constraints (@akshaynexus)
