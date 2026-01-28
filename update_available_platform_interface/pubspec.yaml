@@ -1,6 +1,6 @@
 name: update_available_platform_interface
 description: A common platform interface for the update_available plugin.
-version: 4.1.0+1
+version: 4.1.1
 repository: https://github.com/mateusfccp/update_available/tree/master/update_available_platform_interface
 
 environment:
