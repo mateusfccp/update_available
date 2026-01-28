@@ -1,3 +1,7 @@
+## 3.2.1
+
+- Relax dependencies constraints (@akshaynexus)
+
 ## 3.2.0+1
 
 - Update lint dependencies
