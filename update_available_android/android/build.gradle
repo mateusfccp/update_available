@@ -32,7 +32,10 @@ android {
         targetCompatibility = 17
     }
 
-    // Conditional for compatibility with AGP <4.2.
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
     if (project.android.hasProperty("namespace")) {
         namespace 'me.mateusfccp.update_available_android'
     }
@@ -40,9 +43,11 @@ android {
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
+
     defaultConfig {
         minSdkVersion 21
     }
+
     lintOptions {
         disable 'InvalidPackage'
     }
@@ -50,7 +55,6 @@ android {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-
     implementation 'com.google.android.play:app-update:2.1.0'
     implementation 'com.google.android.play:app-update-ktx:2.1.0'
 }
