@@ -1,6 +1,6 @@
 name: update_available_android
 description: Android platform implementation of update_available
-version: 3.2.0+1
+version: 3.3.0
 repository: https://github.com/mateusfccp/update_available/tree/master/update_available_android
 
 environment:
