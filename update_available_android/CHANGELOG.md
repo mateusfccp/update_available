@@ -1,3 +1,13 @@
+## 3.3.0
+
+- Upgrade tooling and SDK versions for 3.3.0
+
+- Bump version to 3.3.0 across packages
+- Update Kotlin to 2.4.0 and Gradle to 9.5.1
+- Update Android Gradle Plugin to 9.1.1 and `compileSdk` to 36
+- Set Java compatibility and `jvmTarget` to version 17
+- Replace JCenter with MavenCentral in repository configurations
+
 ## 3.2.0+1
 
 - Update lint dependencies
