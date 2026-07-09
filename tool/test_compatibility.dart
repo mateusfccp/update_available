@@ -56,6 +56,8 @@ dependency_overrides:
       'pub',
       'add',
       'update_available',
+      '--path',
+      '$workspaceDirectory/update_available',
     ], workingDirectory: testAppDirectory.path);
 
     if (exitCode != 0) throw Exception('flutter pub add failed');
