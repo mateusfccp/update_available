@@ -19,7 +19,7 @@ jobs:
       run:
         working-directory: update_available
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
     - uses: subosito/flutter-action@v2
       with:
         channel: 'stable'
@@ -33,7 +33,7 @@ jobs:
       run:
         working-directory: update_available_android
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
     - uses: subosito/flutter-action@v2
       with:
         channel: 'stable'
@@ -47,7 +47,7 @@ jobs:
       run:
         working-directory: update_available_ios
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
     - uses: subosito/flutter-action@v2
       with:
         channel: 'stable'
@@ -62,7 +62,7 @@ jobs:
       run:
         working-directory: update_available_platform_interface
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
     - uses: subosito/flutter-action@v2
       with:
         channel: 'stable'
@@ -76,29 +76,30 @@ jobs:
       run:
         working-directory: update_available
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
       - run: flutter pub get
 
   compatibility_checks:
-    name: Compatibility check on Flutter ${{ matrix.flutter-version }}
+    name: Compatibility check on Flutter ${{ matrix.flutter-version || 'latest stable' }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        flutter-version: ['3.10.0', 'stable']
+        flutter-version: ['3.10.0', '']
       fail-fast: false
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Set up JDK 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: 'zulu'
           java-version: '17'
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
+          channel: 'stable'
           flutter-version: ${{ matrix.flutter-version }}
       - name: Run compatibility test
         run: dart tool/test_compatibility.dart
