@@ -52,15 +52,21 @@ dependency_overrides:
     overridesFile.writeAsStringSync(overridesContent);
 
     stdout.writeln('Adding update_available dependency...');
+    final pubspecFile = File('${testAppDirectory.path}/pubspec.yaml');
+    final pubspecContent = pubspecFile.readAsStringSync();
+    pubspecFile.writeAsStringSync(
+      pubspecContent.replaceFirst(
+        'dependencies:\n',
+        'dependencies:\n  update_available:\n    path: $workspaceDirectory/update_available\n',
+      ),
+    );
+
     exitCode = await _runCommand('flutter', [
       'pub',
-      'add',
-      'update_available',
-      '--path',
-      '$workspaceDirectory/update_available',
+      'get',
     ], workingDirectory: testAppDirectory.path);
 
-    if (exitCode != 0) throw Exception('flutter pub add failed');
+    if (exitCode != 0) throw Exception('flutter pub get failed');
 
     stdout.writeln(
       'Building APK (debug) to verify native Gradle and Kotlin compilation...',
