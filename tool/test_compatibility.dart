@@ -68,6 +68,23 @@ dependency_overrides:
 
     if (exitCode != 0) throw Exception('flutter pub get failed');
 
+    stdout.writeln('Patching minSdkVersion to 21...');
+    final buildGradleFile = File(
+      '${testAppDirectory.path}/android/app/build.gradle',
+    );
+    if (buildGradleFile.existsSync()) {
+      var gradleContent = buildGradleFile.readAsStringSync();
+      gradleContent = gradleContent.replaceAll(
+        'minSdkVersion 16',
+        'minSdkVersion 21',
+      );
+      gradleContent = gradleContent.replaceAll(
+        'minSdkVersion flutter.minSdkVersion',
+        'minSdkVersion 21',
+      );
+      buildGradleFile.writeAsStringSync(gradleContent);
+    }
+
     stdout.writeln(
       'Building APK (debug) to verify native Gradle and Kotlin compilation...',
     );
