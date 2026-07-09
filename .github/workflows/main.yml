@@ -84,11 +84,17 @@ jobs:
 
   compatibility_checks:
     name: Compatibility check on Flutter ${{ matrix.flutter-version || 'latest stable' }}
+    needs:
+      - checks_on_update_available
+      - checks_on_update_available_android
+      - checks_on_update_available_ios
+      - checks_on_update_available_platform_interface
+      - checks_minimum_sdk_on_update_available
     runs-on: ubuntu-latest
     strategy:
       matrix:
         flutter-version: ['3.10.0', '']
-      fail-fast: false
+      fail-fast: true
     steps:
       - uses: actions/checkout@v7
       - name: Set up JDK 17
