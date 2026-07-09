@@ -2,14 +2,14 @@ group 'me.mateusfccp.update_available_android'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '2.4.0'
+    ext.kotlin_version = '1.7.10'
     repositories {
         google()
         mavenCentral()
     }
 
     dependencies {
-        classpath("com.android.tools.build:gradle:9.1.1")
+        classpath("com.android.tools.build:gradle:7.3.0")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version")
     }
 }
