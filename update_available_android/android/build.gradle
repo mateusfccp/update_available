@@ -22,7 +22,13 @@ rootProject.allprojects {
 }
 
 apply plugin: "com.android.library"
-apply plugin: "kotlin-android"
+
+def agpMajor = com.android.Version.ANDROID_GRADLE_PLUGIN_VERSION.tokenize('.')[0] as int
+def builtInKotlinActive = agpMajor >= 9 && (!project.hasProperty("android.builtInKotlin") || Boolean.parseBoolean(project.property("android.builtInKotlin").toString()))
+
+if (!builtInKotlinActive) {
+    apply plugin: 'kotlin-android'
+}
 
 android {
     compileSdk = 36
@@ -32,8 +38,10 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_17
+    if (!builtInKotlinActive) {
+        kotlinOptions {
+            jvmTarget = "17"
+        }
     }
 
     // Conditional for compatibility with AGP <4.2.
