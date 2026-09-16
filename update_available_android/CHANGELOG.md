@@ -1,4 +1,4 @@
-## 3.4.0
+## 3.3.0
 
 - Upgrade tooling and SDK versions for 3.3.0
 - Bump version to 3.3.0 across packages
